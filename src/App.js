@@ -13,21 +13,31 @@ class App extends Component {
 import React from 'react';
 
 const App = () => {
+  const profiles = [
+    {name:"Taro" , age:18},
+    {name:"Hanako" , age:16},
+    {name:"Noname" }
+  ]
+
   return (
     <div>
-      <Cat />
-      <Cat />
-      <Cat />
-      <Cat />
-      <Cat />
-      <Cat />
+      {
+        profiles.map((profile , index) => {
+          return <User name={profile.name} age={profile.age} key={index} />
+        })
+      }
+      
     </div>
 
     )
 }
 
-const Cat = () => {
-  return <div>nya!</div>
+const User = (props) => {
+  return <div>Hi, I am {props.name}! , I'm {props.age} years old!</div>
+}
+
+User.defaultProps = {
+  age :1
 }
 
 export default App;
