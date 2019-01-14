@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 class App extends Component {
   render() {
-    return <h1>Hello World</h1>;
+    const greeting = "HiTom!";
+    const dom = <h1>{greeting}</h1>;
+    return dom;
   }
 }
 
