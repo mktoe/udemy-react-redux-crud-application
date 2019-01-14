@@ -14,7 +14,7 @@ import reducer from './reducers'
 import App from './components/App'
 
 import './index.css';
-import App from './App';
+//import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //storeの作成
